@@ -1,0 +1,47 @@
+inherited frmWordnikMain_NmXhdpiPh: TfrmWordnikMain_NmXhdpiPh
+  ClientHeight = 615
+  ClientWidth = 400
+  DesignerMasterStyle = 0
+  inherited Header: TToolBar
+    Size.Width = 400.000000000000000000
+    inherited HeaderLabel: TLabel
+      Size.Width = 400.000000000000000000
+    end
+  end
+  inherited Footer: TToolBar
+    Position.Y = 567.000000000000000000
+    Size.Width = 400.000000000000000000
+  end
+  inherited FlowLayout1: TFlowLayout
+    Size.Width = 400.000000000000000000
+    inherited Label1: TLabel
+      Size.Width = 135.000000000000000000
+      Size.Height = 23.000000000000000000
+      Size.PlatformDefault = False
+    end
+    inherited edtWordLookup: TEdit
+      Position.X = 155.000000000000000000
+    end
+    inherited Button1: TButton
+      Position.X = 262.000000000000000000
+    end
+  end
+  inherited Label2: TLabel
+    Size.Width = 395.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+  end
+  inherited lvDefinitions: TListView
+    Size.Width = 400.000000000000000000
+    Size.Height = 233.000000000000000000
+    ItemAppearanceObjects.HeaderObjects.Text.Font.StyleExt = {00040000000200000004000000}
+  end
+  inherited Label3: TLabel
+    Position.Y = 394.000000000000000000
+    Size.Width = 395.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+  end
+  inherited lvExamples: TListView
+    Position.Y = 416.000000000000000000
+    Size.Width = 400.000000000000000000
+  end
+end

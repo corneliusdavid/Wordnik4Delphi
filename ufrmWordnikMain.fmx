@@ -1,0 +1,181 @@
+object frmWordnikMain: TfrmWordnikMain
+  Left = 0
+  Top = 0
+  Caption = 'Header Footer Form'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 1440
+  FormFactor.Height = 900
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Header: TToolBar
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object HeaderLabel: TLabel
+      Align = Contents
+      Size.Width = 384.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.HorzAlign = Center
+      Text = 'Wordnik 4 Delphi'
+    end
+  end
+  object Footer: TToolBar
+    Align = Bottom
+    Position.Y = 519.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'bottomtoolbar'
+    TabOrder = 1
+  end
+  object FlowLayout1: TFlowLayout
+    Align = Top
+    Position.Y = 48.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 81.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Justify = Left
+    JustifyLastLine = Left
+    FlowDirection = LeftToRight
+    object Label1: TLabel
+      Margins.Left = 10.000000000000000000
+      Margins.Top = 10.000000000000000000
+      Position.X = 10.000000000000000000
+      Position.Y = 10.000000000000000000
+      Text = 'Enter a word:'
+      TabOrder = 0
+    end
+    object edtWordLookup: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 1
+      Position.X = 140.000000000000000000
+      Position.Y = 10.000000000000000000
+      Margins.Left = 10.000000000000000000
+      Margins.Top = 10.000000000000000000
+    end
+    object Button1: TButton
+      Action = actWordLookup
+      Enabled = True
+      ImageIndex = -1
+      Margins.Left = 10.000000000000000000
+      Margins.Top = 10.000000000000000000
+      Position.X = 250.000000000000000000
+      Position.Y = 10.000000000000000000
+      TabOrder = 2
+    end
+  end
+  object Label2: TLabel
+    Align = Top
+    StyledSettings = [Family, Size, FontColor]
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Position.X = 5.000000000000000000
+    Position.Y = 134.000000000000000000
+    Size.Width = 379.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+    Text = 'Definitions:'
+    TabOrder = 5
+  end
+  object lvDefinitions: TListView
+    ItemAppearanceClassName = 'TListItemAppearance'
+    ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    ItemIndex = 0
+    Align = Client
+    Size.Width = 384.000000000000000000
+    Size.Height = 185.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    ItemAppearanceObjects.ItemObjects.Text.TextVertAlign = Leading
+    ItemAppearanceObjects.ItemObjects.Text.WordWrap = True
+    ItemAppearanceObjects.ItemObjects.Text.Width = 335.000000000000000000
+    ItemAppearanceObjects.ItemObjects.Text.Height = 44.000000000000000000
+    ItemAppearanceObjects.ItemObjects.Text.PlaceOffset.X = 14.000000000000000000
+    ItemAppearanceObjects.ItemObjects.Accessory.Visible = False
+    ItemAppearanceObjects.HeaderObjects.Text.Font.StyleExt = {00040000000200000004000000}
+  end
+  object Label3: TLabel
+    Align = Bottom
+    StyledSettings = [Family, Size, FontColor]
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Position.X = 5.000000000000000000
+    Position.Y = 346.000000000000000000
+    Size.Width = 379.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+    Text = 'Examples:'
+    TabOrder = 3
+  end
+  object lvExamples: TListView
+    ItemAppearanceClassName = 'TListItemAppearance'
+    ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    Align = Bottom
+    Position.Y = 368.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 151.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    ItemAppearanceObjects.ItemObjects.Text.TextVertAlign = Leading
+    ItemAppearanceObjects.ItemObjects.Text.WordWrap = True
+    ItemAppearanceObjects.ItemObjects.Accessory.Visible = False
+  end
+  object BindSrcDefinitions: TBindSourceDB
+    DataSet = dmWordnikAPI.tblDefinitions
+    ScopeMappings = <>
+    Left = 104
+    Top = 248
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 196
+    Top = 397
+    object LinkListControlToField1: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSrcDefinitions
+      FieldName = 'text'
+      Control = lvDefinitions
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillHeaderFieldName = 'partOfSpeech'
+      FillBreakGroups = <>
+    end
+    object LinkListControlToField2: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSrcExamples
+      FieldName = 'text'
+      Control = lvExamples
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+  object BindSrcExamples: TBindSourceDB
+    DataSet = dmWordnikAPI.tblExamples
+    ScopeMappings = <>
+    Left = 184
+    Top = 280
+  end
+  object aclWordnik: TActionList
+    Left = 328
+    Top = 312
+    object actWordLookup: TAction
+      Text = 'Lookup'
+      OnExecute = actWordLookupExecute
+    end
+  end
+end

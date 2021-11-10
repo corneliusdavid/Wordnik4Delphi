@@ -1,0 +1,52 @@
+inherited frmWordnikMain_iPhone47in: TfrmWordnikMain_iPhone47in
+  ClientHeight = 647
+  ClientWidth = 375
+  DesignerMasterStyle = 0
+  inherited Header: TToolBar
+    Size.Width = 375.000000000000000000
+    Size.Height = 44.000000000000000000
+    inherited HeaderLabel: TLabel
+      Size.Width = 375.000000000000000000
+      Size.Height = 44.000000000000000000
+    end
+  end
+  inherited Footer: TToolBar
+    Position.Y = 603.000000000000000000
+    Size.Width = 375.000000000000000000
+    Size.Height = 44.000000000000000000
+  end
+  inherited FlowLayout1: TFlowLayout
+    Position.Y = 44.000000000000000000
+    Size.Width = 375.000000000000000000
+    inherited Label1: TLabel
+      Size.Width = 127.000000000000000000
+      Size.Height = 21.000000000000000000
+      Size.PlatformDefault = False
+    end
+    inherited edtWordLookup: TEdit
+      Position.X = 147.000000000000000000
+    end
+    inherited Button1: TButton
+      Position.X = 254.000000000000000000
+    end
+  end
+  inherited Label2: TLabel
+    Position.Y = 130.000000000000000000
+    Size.Width = 370.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+  end
+  inherited lvDefinitions: TListView
+    Size.Width = 375.000000000000000000
+    Size.Height = 273.000000000000000000
+    ItemAppearanceObjects.HeaderObjects.Text.Font.StyleExt = {00040000000200000004000000}
+  end
+  inherited Label3: TLabel
+    Position.Y = 430.000000000000000000
+    Size.Width = 370.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+  end
+  inherited lvExamples: TListView
+    Position.Y = 452.000000000000000000
+    Size.Width = 375.000000000000000000
+  end
+end
