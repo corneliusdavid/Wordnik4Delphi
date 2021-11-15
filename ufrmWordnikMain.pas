@@ -7,7 +7,7 @@ uses
   FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls, FMX.Controls.Presentation,
   FMX.ListView.Types, FMX.ListView.Appearances, FMX.ListView.Adapters.Base, FMX.ListView, FMX.Edit, FMX.Layouts,
   System.Rtti, System.Bindings.Outputs, Fmx.Bind.Editors, Data.Bind.EngExt, Fmx.Bind.DBEngExt, Data.Bind.Components,
-  Data.Bind.DBScope, System.Actions, FMX.ActnList;
+  Data.Bind.DBScope, System.Actions, FMX.ActnList, FMX.Objects;
 
 type
   TfrmWordnikMain = class(TForm)
@@ -29,6 +29,7 @@ type
     LinkListControlToField2: TLinkListControlToField;
     aclWordnik: TActionList;
     actWordLookup: TAction;
+    imgBotLogo: TImage;
     procedure actWordLookupExecute(Sender: TObject);
   private
     { Private declarations }
@@ -44,6 +45,7 @@ implementation
 {$R *.fmx}
 {$R *.NmXhdpiPh.fmx ANDROID}
 {$R *.iPhone47in.fmx IOS}
+{$R *.SmXhdpiPh.fmx ANDROID}
 
 uses udmWordnikAPI;
 
