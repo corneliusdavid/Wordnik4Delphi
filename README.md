@@ -1,5 +1,7 @@
 # Wordnik 4 Delphi #
 
+![Wordnik Logo](https://www.wordnik.com/img/wordnik-logo-300px.png)
+
 This is a small cross-platform client application written in **Delphi 11** and using standard components found in the Professional Edition (*it may also work with the Community Edition but has not been tested there*).
 
 It demonstrates how to access a public REST API and parse JSON results into FireDAC memory tables linked with LiveBindings to fill a couple of ListViews--all with only 5 lines of hand-written code that are used to send an entered word to the API.
