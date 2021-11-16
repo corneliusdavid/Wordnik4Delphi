@@ -1,6 +1,6 @@
 # Wordnik 4 Delphi #
 
-![Wordnik Logo](https://www.wordnik.com/img/wordnik-logo-300px.png)
+![Wordnik Logo](/wordnik-logo-300px.png)
 
 This is a small cross-platform client application written in **Delphi 11** and using standard components found in the Professional Edition (*it may also work with the Community Edition but has not been tested there*).
 
