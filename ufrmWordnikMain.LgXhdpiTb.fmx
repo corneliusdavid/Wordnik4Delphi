@@ -1,27 +1,27 @@
-inherited frmWordnikMain_SmXhdpiPh: TfrmWordnikMain_SmXhdpiPh
-  ClientHeight = 375
-  ClientWidth = 250
+inherited frmWordnikMain_LgXhdpiTb: TfrmWordnikMain_LgXhdpiTb
+  ClientHeight = 829
+  ClientWidth = 480
   DesignerMasterStyle = 0
   inherited Header: TToolBar
-    Size.Width = 250.000000000000000000
+    Size.Width = 480.000000000000000000
     inherited HeaderLabel: TLabel
-      Size.Width = 250.000000000000000000
+      Size.Width = 480.000000000000000000
     end
   end
   inherited Footer: TToolBar
-    Position.Y = 327.000000000000000000
-    Size.Width = 250.000000000000000000
+    Position.Y = 781.000000000000000000
+    Size.Width = 480.000000000000000000
     Size.Height = 48.000000000000000000
     inherited imgBotLogo: TImage
       MultiResBitmap.Height = 18
       MultiResBitmap.Width = 132
-      Position.X = -67.000000000000000000
+      Position.X = 48.000000000000000000
       Size.Height = 48.000000000000000000
     end
   end
   inherited FlowLayout1: TFlowLayout
-    Size.Width = 250.000000000000000000
-    Size.Height = 81.000000000000000000
+    Size.Width = 480.000000000000000000
+    Size.Height = 57.000000000000000000
     inherited Label1: TLabel
       Size.Width = 111.000000000000000000
       Size.Height = 23.000000000000000000
@@ -29,69 +29,53 @@ inherited frmWordnikMain_SmXhdpiPh: TfrmWordnikMain_SmXhdpiPh
     end
     inherited edtWordLookup: TEdit
       Position.X = 131.000000000000000000
-      Position.Y = 2.000000000000000000
-      Margins.Top = 2.000000000000000000
     end
     inherited Button1: TButton
-      Margins.Top = 5.000000000000000000
-      Position.X = 10.000000000000000000
-      Position.Y = 39.000000000000000000
+      Position.X = 238.000000000000000000
       Size.Width = 73.000000000000000000
-      Size.Height = 37.000000000000000000
+      Size.Height = 35.000000000000000000
       Size.PlatformDefault = False
     end
     inherited Button2: TButton
-      Margins.Top = 5.000000000000000000
-      Position.X = 93.000000000000000000
-      Position.Y = 39.000000000000000000
+      Position.X = 321.000000000000000000
       Size.Width = 73.000000000000000000
-      Size.Height = 37.000000000000000000
+      Size.Height = 35.000000000000000000
       Size.PlatformDefault = False
     end
     inherited Button3: TButton
-      Margins.Top = 5.000000000000000000
-      Position.X = 176.000000000000000000
-      Position.Y = 39.000000000000000000
+      Position.X = 404.000000000000000000
+      Position.Y = 10.000000000000000000
       Size.Width = 73.000000000000000000
-      Size.Height = 37.000000000000000000
+      Size.Height = 35.000000000000000000
       Size.PlatformDefault = False
     end
   end
   inherited Label2: TLabel
-    StyledSettings = [Family, FontColor]
-    Margins.Top = 1.000000000000000000
-    Margins.Bottom = 1.000000000000000000
-    Position.Y = 130.000000000000000000
-    Size.Width = 245.000000000000000000
-    TextSettings.Font.Size = 11.000000000000000000
+    Position.Y = 110.000000000000000000
+    Size.Width = 475.000000000000000000
     TextSettings.Font.StyleExt = {00070000000000000004000000}
   end
   inherited lvDefinitions: TListView
-    ScrollViewPos = 19.000000000000000000
-    Size.Width = 250.000000000000000000
-    Size.Height = 81.000000000000000000
+    Size.Width = 480.000000000000000000
+    Size.Height = 401.000000000000000000
     ItemAppearanceObjects.ItemObjects.Text.Font.Family = 'Tahoma'
     ItemAppearanceObjects.ItemObjects.Text.Font.Size = 11.000000000000000000
     ItemAppearanceObjects.ItemObjects.Text.TextVertAlign = Leading
     ItemAppearanceObjects.ItemObjects.Text.WordWrap = True
-    ItemAppearanceObjects.ItemObjects.Text.Width = 217.000000000000000000
+    ItemAppearanceObjects.ItemObjects.Text.Width = 449.000000000000000000
     ItemAppearanceObjects.ItemObjects.Text.Height = 44.000000000000000000
     ItemAppearanceObjects.ItemObjects.Text.PlaceOffset.X = 14.000000000000000000
     ItemAppearanceObjects.HeaderObjects.Text.Font.StyleExt = {00040000000200000004000000}
   end
   inherited Label3: TLabel
-    StyledSettings = [Family, FontColor]
-    Margins.Top = 1.000000000000000000
-    Margins.Bottom = 1.000000000000000000
-    Position.Y = 230.000000000000000000
-    Size.Width = 245.000000000000000000
-    TextSettings.Font.Size = 11.000000000000000000
+    Position.Y = 538.000000000000000000
+    Size.Width = 475.000000000000000000
     TextSettings.Font.StyleExt = {00070000000000000004000000}
   end
   inherited lvExamples: TListView
-    Position.Y = 248.000000000000000000
-    Size.Width = 250.000000000000000000
-    Size.Height = 79.000000000000000000
+    Position.Y = 560.000000000000000000
+    Size.Width = 480.000000000000000000
+    Size.Height = 221.000000000000000000
     ItemAppearanceObjects.ItemObjects.Text.Font.Family = 'Tahoma'
     ItemAppearanceObjects.ItemObjects.Text.Font.Size = 11.000000000000000000
   end

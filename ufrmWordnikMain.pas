@@ -37,10 +37,6 @@ type
     procedure actWordLookupExecute(Sender: TObject);
     procedure actWordOfTheDayExecute(Sender: TObject);
     procedure actRandomWordExecute(Sender: TObject);
-  private
-    { Private declarations }
-  public
-    { Public declarations }
   end;
 
 var
@@ -53,6 +49,12 @@ implementation
 {$R *.iPhone47in.fmx IOS}
 {$R *.SmXhdpiPh.fmx ANDROID}
 {$R *.Windows.fmx MSWINDOWS}
+{$R *.iPhone.fmx IOS}
+{$R *.iPhone4in.fmx IOS}
+{$R *.iPhone55in.fmx IOS}
+{$R *.LgXhdpiPh.fmx ANDROID}
+{$R *.LgXhdpiTb.fmx ANDROID}
+{$R *.Macintosh.fmx MACOS}
 
 uses udmWordnikAPI;
 
