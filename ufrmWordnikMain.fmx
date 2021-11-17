@@ -183,21 +183,16 @@ object frmWordnikMain: TfrmWordnikMain
     TabOrder = 5
   end
   object lvDefinitions: TListView
-    ItemAppearanceClassName = 'TListItemAppearance'
-    ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+    ItemAppearanceClassName = 'TCustomizeItemObjects'
+    ItemEditAppearanceClassName = 'TCustomizeItemObjects'
     HeaderAppearanceClassName = 'TListHeaderObjects'
-    FooterAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TCustomizeItemObjects'
+    ItemIndex = 1
     Align = Client
     Size.Width = 440.000000000000000000
     Size.Height = 242.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 6
-    ItemAppearanceObjects.ItemObjects.Text.TextVertAlign = Leading
-    ItemAppearanceObjects.ItemObjects.Text.WordWrap = True
-    ItemAppearanceObjects.ItemObjects.Text.Width = 335.000000000000000000
-    ItemAppearanceObjects.ItemObjects.Text.Height = 44.000000000000000000
-    ItemAppearanceObjects.ItemObjects.Text.PlaceOffset.X = 14.000000000000000000
-    ItemAppearanceObjects.ItemObjects.Accessory.Visible = False
     ItemAppearanceObjects.HeaderObjects.Text.Font.StyleExt = {00040000000200000004000000}
   end
   object Label3: TLabel

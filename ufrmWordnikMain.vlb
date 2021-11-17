@@ -19,7 +19,7 @@ Coordinates=199,564,53,33
 Visible=False
 
 [lvDefinitions]
-Coordinates=260,10,89,141
+Coordinates=260,10,89,195
 Visible=True
 
 [Label3]
@@ -72,7 +72,8 @@ Coordinates=494,1,151,33
 Visible=False
 
 [dmWordnikAPI.RESTRespExamples]
-Coordinates=494,500,191,303
+Coordinates=494,500,191,33
+Visible=False
 
 [dmWordnikAPI.RESTReqExamples]
 Coordinates=494,233,186,33
@@ -80,4 +81,52 @@ Visible=False
 
 [BindSrcExamples]
 Coordinates=494,1,133,231
+
+[dmWordnikAPI.RESTReqWOTD]
+Coordinates=220,220,169,33
+Visible=False
+
+[aclWordnik]
+Coordinates=756,217,69,33
+
+[actRandomWord]
+Coordinates=756,272,96,33
+
+[dmWordnikAPI.tblWOTD]
+Coordinates=274,435,135,33
+Visible=False
+
+[Button3]
+Coordinates=58,729,53,33
+Visible=False
+
+[dmWordnikAPI.RESTReqRandom]
+Coordinates=870,130,179,33
+Visible=False
+
+[actWordLookup]
+Coordinates=756,327,92,33
+
+[dmWordnikAPI.tblRandom]
+Coordinates=526,376,144,33
+Visible=False
+
+[imgBotLogo]
+Coordinates=196,729,74,33
+Visible=False
+
+[Button2]
+Coordinates=127,729,53,33
+Visible=False
+
+[actWordOfTheDay]
+Coordinates=756,382,104,33
+
+[dmWordnikAPI.RESTRespWOTD]
+Coordinates=285,729,175,33
+Visible=False
+
+[dmWordnikAPI.RESTRespRandom]
+Coordinates=210,220,184,33
+Visible=False
 

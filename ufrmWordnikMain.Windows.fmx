@@ -46,10 +46,6 @@ inherited frmWordnikMain_Windows: TfrmWordnikMain_Windows
   inherited lvDefinitions: TListView
     Size.Width = 500.000000000000000000
     Size.Height = 266.000000000000000000
-    ItemAppearance.ItemHeight = 52
-    ItemAppearanceObjects.ItemObjects.Text.Font.Family = 'Segoe WP SemiLight'
-    ItemAppearanceObjects.ItemObjects.Text.Width = 465.000000000000000000
-    ItemAppearanceObjects.ItemObjects.Text.Height = 50.000000000000000000
     ItemAppearanceObjects.HeaderObjects.Text.Font.StyleExt = {00040000000200000004000000}
   end
   inherited Label3: TLabel
