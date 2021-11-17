@@ -1,0 +1,34 @@
+inherited frmWordnikMain_Windows: TfrmWordnikMain_Windows
+  Caption = 'Wordnik Demo'
+  DesignerMasterStyle = 0
+  inherited Footer: TToolBar
+    inherited imgBotLogo: TImage
+      MultiResBitmap.Height = 18
+      MultiResBitmap.Width = 132
+      Position.X = 85.000000000000000000
+      Size.Width = 270.000000000000000000
+    end
+  end
+  inherited FlowLayout1: TFlowLayout
+    Size.Height = 49.000000000000000000
+  end
+  inherited Label2: TLabel
+    Position.Y = 102.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+  end
+  inherited lvDefinitions: TListView
+    Size.Height = 266.000000000000000000
+    ItemAppearance.ItemHeight = 52
+    ItemAppearanceObjects.ItemObjects.Text.Font.Family = 'Segoe WP SemiLight'
+    ItemAppearanceObjects.ItemObjects.Text.Width = 409.000000000000000000
+    ItemAppearanceObjects.ItemObjects.Text.Height = 50.000000000000000000
+    ItemAppearanceObjects.HeaderObjects.Text.Font.StyleExt = {00040000000200000004000000}
+  end
+  inherited Label3: TLabel
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+  end
+  inherited lvExamples: TListView
+    ItemAppearance.ItemHeight = 52
+    ItemAppearanceObjects.ItemObjects.Text.Font.Family = 'Segoe WP SemiLight'
+  end
+end

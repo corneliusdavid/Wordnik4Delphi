@@ -46,6 +46,7 @@ implementation
 {$R *.NmXhdpiPh.fmx ANDROID}
 {$R *.iPhone47in.fmx IOS}
 {$R *.SmXhdpiPh.fmx ANDROID}
+{$R *.Windows.fmx MSWINDOWS}
 
 uses udmWordnikAPI;
 
