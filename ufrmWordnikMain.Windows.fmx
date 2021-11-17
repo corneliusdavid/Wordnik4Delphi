@@ -1,33 +1,63 @@
 inherited frmWordnikMain_Windows: TfrmWordnikMain_Windows
   Caption = 'Wordnik Demo'
+  ClientWidth = 500
   DesignerMasterStyle = 0
+  inherited Header: TToolBar
+    Size.Width = 500.000000000000000000
+    inherited HeaderLabel: TLabel
+      Size.Width = 500.000000000000000000
+    end
+  end
   inherited Footer: TToolBar
+    Size.Width = 500.000000000000000000
     inherited imgBotLogo: TImage
       MultiResBitmap.Height = 18
       MultiResBitmap.Width = 132
-      Position.X = 85.000000000000000000
+      Position.X = 115.000000000000000000
       Size.Width = 270.000000000000000000
     end
   end
   inherited FlowLayout1: TFlowLayout
+    Size.Width = 500.000000000000000000
     Size.Height = 49.000000000000000000
+    inherited Label1: TLabel
+      Size.Width = 95.000000000000000000
+      Size.PlatformDefault = False
+    end
+    inherited edtWordLookup: TEdit
+      Position.X = 115.000000000000000000
+    end
+    inherited Button1: TButton
+      Position.X = 225.000000000000000000
+    end
+    inherited Button2: TButton
+      Position.X = 315.000000000000000000
+    end
+    inherited Button3: TButton
+      Position.X = 405.000000000000000000
+      Position.Y = 10.000000000000000000
+    end
   end
   inherited Label2: TLabel
     Position.Y = 102.000000000000000000
+    Size.Width = 495.000000000000000000
     TextSettings.Font.StyleExt = {00070000000000000004000000}
   end
   inherited lvDefinitions: TListView
+    Size.Width = 500.000000000000000000
     Size.Height = 266.000000000000000000
     ItemAppearance.ItemHeight = 52
     ItemAppearanceObjects.ItemObjects.Text.Font.Family = 'Segoe WP SemiLight'
-    ItemAppearanceObjects.ItemObjects.Text.Width = 409.000000000000000000
+    ItemAppearanceObjects.ItemObjects.Text.Width = 465.000000000000000000
     ItemAppearanceObjects.ItemObjects.Text.Height = 50.000000000000000000
     ItemAppearanceObjects.HeaderObjects.Text.Font.StyleExt = {00040000000200000004000000}
   end
   inherited Label3: TLabel
+    Size.Width = 495.000000000000000000
     TextSettings.Font.StyleExt = {00070000000000000004000000}
   end
   inherited lvExamples: TListView
+    Size.Width = 500.000000000000000000
     ItemAppearance.ItemHeight = 52
     ItemAppearanceObjects.ItemObjects.Text.Font.Family = 'Segoe WP SemiLight'
   end

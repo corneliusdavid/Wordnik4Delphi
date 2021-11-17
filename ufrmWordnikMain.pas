@@ -30,7 +30,13 @@ type
     aclWordnik: TActionList;
     actWordLookup: TAction;
     imgBotLogo: TImage;
+    actWordOfTheDay: TAction;
+    actRandomWord: TAction;
+    Button2: TButton;
+    Button3: TButton;
     procedure actWordLookupExecute(Sender: TObject);
+    procedure actWordOfTheDayExecute(Sender: TObject);
+    procedure actRandomWordExecute(Sender: TObject);
   private
     { Private declarations }
   public
@@ -53,6 +59,18 @@ uses udmWordnikAPI;
 procedure TfrmWordnikMain.actWordLookupExecute(Sender: TObject);
 begin
   dmWordnikAPI.GetDefsAndExamples(edtWordLookup.Text);
+end;
+
+procedure TfrmWordnikMain.actRandomWordExecute(Sender: TObject);
+begin
+  edtWordLookup.Text := dmWordnikAPI.GetRandomWord;
+  actWordLookup.Execute;
+end;
+
+procedure TfrmWordnikMain.actWordOfTheDayExecute(Sender: TObject);
+begin
+  edtWordLookup.Text := dmWordnikAPI.GetWordOfTheDay;
+  actWordLookup.Execute;
 end;
 
 end.

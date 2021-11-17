@@ -1,14 +1,15 @@
 object dmWordnikAPI: TdmWordnikAPI
-  Height = 480
-  Width = 640
-  PixelsPerInch = 96
+  OnCreate = DataModuleCreate
+  Height = 548
+  Width = 722
+  PixelsPerInch = 120
   object RESTClientWordnik: TRESTClient
     Accept = 'application/json, text/plain; q=0.9, text/html;q=0.8,'
     AcceptCharset = 'utf-8, *;q=0.8'
     BaseURL = 'https://api.wordnik.com/v4'
     Params = <>
-    Left = 48
-    Top = 48
+    Left = 60
+    Top = 60
   end
   object RESTReqDefinitions: TRESTRequest
     AssignedValues = [rvConnectTimeout, rvReadTimeout]
@@ -16,35 +17,30 @@ object dmWordnikAPI: TdmWordnikAPI
     Params = <
       item
         Name = 'api_key'
-        Value = '<enter your own API key here>'
+        Value = '<replaced at runtime>'
       end>
     Resource = 'word.json/hippopotamus'
     ResourceSuffix = 'definitions'
     Response = RESTRespDefinitions
-    Left = 80
-    Top = 112
+    Left = 100
+    Top = 140
   end
   object RESTRespDefinitions: TRESTResponse
     ContentType = 'application/json'
-    Left = 88
-    Top = 176
+    Left = 110
+    Top = 220
   end
   object RESTRespDSADefinitions: TRESTResponseDataSetAdapter
     Active = True
     Dataset = tblDefinitions
     FieldDefs = <>
     Response = RESTRespDefinitions
-    Left = 88
-    Top = 240
+    Left = 110
+    Top = 300
   end
   object tblDefinitions: TFDMemTable
     Active = True
     FieldDefs = <
-      item
-        Name = 'message'
-        DataType = ftWideString
-        Size = 255
-      end
       item
         Name = 'id'
         DataType = ftWideString
@@ -136,8 +132,8 @@ object dmWordnikAPI: TdmWordnikAPI
     UpdateOptions.CheckRequired = False
     UpdateOptions.AutoCommitUpdates = True
     StoreDefs = True
-    Left = 88
-    Top = 312
+    Left = 110
+    Top = 390
     object tblDefinitionsid: TWideStringField
       FieldName = 'id'
       Origin = 'id'
@@ -225,18 +221,18 @@ object dmWordnikAPI: TdmWordnikAPI
     Params = <
       item
         Name = 'api_key'
-        Value = '<enter your own API key here>'
+        Value = '<replaced at runtime>'
       end>
     Resource = 'word.json/hippopotamus'
     ResourceSuffix = 'examples'
     Response = RESTRespExamples
-    Left = 256
-    Top = 120
+    Left = 240
+    Top = 102
   end
   object RESTRespExamples: TRESTResponse
     ContentType = 'application/json'
     RootElement = 'examples'
-    Left = 264
+    Left = 250
     Top = 192
   end
   object RESTRespDSAExamples: TRESTResponseDataSetAdapter
@@ -244,8 +240,8 @@ object dmWordnikAPI: TdmWordnikAPI
     Dataset = tblExamples
     FieldDefs = <>
     Response = RESTRespExamples
-    Left = 264
-    Top = 256
+    Left = 250
+    Top = 272
   end
   object tblExamples: TFDMemTable
     Active = True
@@ -271,12 +267,12 @@ object dmWordnikAPI: TdmWordnikAPI
       item
         Name = 'word'
         DataType = ftWideString
-        Size = 12
+        Size = 50
       end
       item
         Name = 'text'
         DataType = ftWideString
-        Size = 79
+        Size = 500
       end
       item
         Name = 'documentId'
@@ -289,7 +285,7 @@ object dmWordnikAPI: TdmWordnikAPI
       item
         Name = 'title'
         DataType = ftWideString
-        Size = 11
+        Size = 200
       end>
     IndexDefs = <>
     FetchOptions.AssignedValues = [evMode]
@@ -301,8 +297,8 @@ object dmWordnikAPI: TdmWordnikAPI
     UpdateOptions.FetchGeneratorsPoint = gpNone
     UpdateOptions.CheckRequired = False
     StoreDefs = True
-    Left = 264
-    Top = 320
+    Left = 250
+    Top = 352
     object tblExamplesprovider: TWideStringField
       FieldName = 'provider'
       Origin = 'provider'
@@ -324,12 +320,12 @@ object dmWordnikAPI: TdmWordnikAPI
     object tblExamplesword: TWideStringField
       FieldName = 'word'
       Origin = 'word'
-      Size = 12
+      Size = 50
     end
     object tblExamplestext: TWideStringField
       FieldName = 'text'
       Origin = 'text'
-      Size = 79
+      Size = 500
     end
     object tblExamplesdocumentId: TFloatField
       FieldName = 'documentId'
@@ -342,7 +338,138 @@ object dmWordnikAPI: TdmWordnikAPI
     object tblExamplestitle: TWideStringField
       FieldName = 'title'
       Origin = 'title'
-      Size = 11
+      Size = 200
+    end
+  end
+  object RESTReqWOTD: TRESTRequest
+    AssignedValues = [rvConnectTimeout, rvReadTimeout]
+    Client = RESTClientWordnik
+    Params = <
+      item
+        Name = 'api_key'
+        Value = '<replaced at runtime>'
+      end
+      item
+        Name = 'date'
+        Value = '2021-11-12'
+      end>
+    Resource = 'words.json/wordOfTheDay'
+    Response = RESTRespWOTD
+    Left = 384
+    Top = 160
+  end
+  object RESTRespWOTD: TRESTResponse
+    ContentType = 'application/json'
+    Left = 392
+    Top = 240
+  end
+  object RESTRespDSAWordOofTheDay: TRESTResponseDataSetAdapter
+    Dataset = tblWOTD
+    FieldDefs = <>
+    Response = RESTRespWOTD
+    Left = 392
+    Top = 312
+  end
+  object tblWOTD: TFDMemTable
+    FieldDefs = <>
+    IndexDefs = <>
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvPersistent, rvSilentMode]
+    ResourceOptions.Persistent = True
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvUpdateChngFields, uvUpdateMode, uvLockMode, uvLockPoint, uvLockWait, uvRefreshMode, uvFetchGeneratorsPoint, uvCheckRequired, uvCheckReadOnly, uvCheckUpdatable]
+    UpdateOptions.LockWait = True
+    UpdateOptions.FetchGeneratorsPoint = gpNone
+    UpdateOptions.CheckRequired = False
+    StoreDefs = True
+    Left = 392
+    Top = 384
+    object tblWOTD_id: TWideStringField
+      FieldName = '_id'
+      Size = 24
+    end
+    object tblWOTDword: TWideStringField
+      FieldName = 'word'
+      Size = 50
+    end
+    object tblWOTDcontentProvider: TWideStringField
+      FieldName = 'contentProvider'
+      Size = 255
+    end
+    object tblWOTDdefinitions: TWideStringField
+      FieldName = 'definitions'
+      Size = 255
+    end
+    object tblWOTDpublishDate: TDateTimeField
+      FieldName = 'publishDate'
+    end
+    object tblWOTDexamples: TWideStringField
+      FieldName = 'examples'
+      Size = 255
+    end
+    object tblWOTDpdd: TDateTimeField
+      FieldName = 'pdd'
+    end
+    object tblWOTDnote: TWideStringField
+      FieldName = 'note'
+      Size = 500
+    end
+    object tblWOTDhtmlExtra: TWideStringField
+      FieldName = 'htmlExtra'
+      Size = 255
+    end
+  end
+  object RESTReqRandom: TRESTRequest
+    AssignedValues = [rvConnectTimeout, rvReadTimeout]
+    Client = RESTClientWordnik
+    Params = <
+      item
+        Name = 'api_key'
+        Value = '<replaced at runtime>'
+      end
+      item
+        Name = 'hasDictionaryDef'
+        Value = 'true'
+      end>
+    Resource = 'words.json/randomWord'
+    Response = RESTRespRandom
+    Left = 560
+    Top = 104
+  end
+  object RESTRespRandom: TRESTResponse
+    ContentType = 'application/json'
+    Left = 568
+    Top = 176
+  end
+  object RESTRespDSARandom: TRESTResponseDataSetAdapter
+    Dataset = tblRandom
+    FieldDefs = <>
+    Response = RESTRespRandom
+    Left = 568
+    Top = 248
+  end
+  object tblRandom: TFDMemTable
+    FieldDefs = <>
+    IndexDefs = <>
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvPersistent, rvSilentMode]
+    ResourceOptions.Persistent = True
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvUpdateChngFields, uvUpdateMode, uvLockMode, uvLockPoint, uvLockWait, uvRefreshMode, uvFetchGeneratorsPoint, uvCheckRequired, uvCheckReadOnly, uvCheckUpdatable]
+    UpdateOptions.LockWait = True
+    UpdateOptions.FetchGeneratorsPoint = gpNone
+    UpdateOptions.CheckRequired = False
+    StoreDefs = True
+    Left = 568
+    Top = 320
+    object tblRandomid: TFloatField
+      FieldName = 'id'
+    end
+    object tblRandomword: TWideStringField
+      FieldName = 'word'
+      Size = 255
     end
   end
 end
