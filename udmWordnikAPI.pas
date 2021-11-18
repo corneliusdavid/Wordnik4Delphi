@@ -103,7 +103,7 @@ end;
 
 function TdmWordnikAPI.GetAPIKey: string;
 begin
-  Result := '< enter your API Key here >';
+  Result := 'arqntn49hevnmr68rm20ohqyrjzkh001i3l5k847jq1w0bkz1';
 end;
 
 procedure TdmWordnikAPI.GetDefsAndExamples(const WordLookup: string);

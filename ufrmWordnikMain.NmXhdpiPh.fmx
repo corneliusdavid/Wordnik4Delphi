@@ -1,5 +1,5 @@
 inherited frmWordnikMain_NmXhdpiPh: TfrmWordnikMain_NmXhdpiPh
-  ClientHeight = 615
+  ClientHeight = 616
   ClientWidth = 400
   DesignerMasterStyle = 0
   inherited Header: TToolBar
@@ -9,7 +9,6 @@ inherited frmWordnikMain_NmXhdpiPh: TfrmWordnikMain_NmXhdpiPh
     end
   end
   inherited Footer: TToolBar
-    Position.Y = 567.000000000000000000
     Size.Width = 400.000000000000000000
     Size.Height = 48.000000000000000000
     inherited imgBotLogo: TImage
@@ -66,7 +65,7 @@ inherited frmWordnikMain_NmXhdpiPh: TfrmWordnikMain_NmXhdpiPh
   end
   inherited lvDefinitions: TListView
     Size.Width = 400.000000000000000000
-    Size.Height = 233.000000000000000000
+    Size.Height = 234.000000000000000000
     ItemAppearanceObjects.ItemObjects.Text.Font.Family = 'Microsoft Sans Serif'
     ItemAppearanceObjects.ItemObjects.Text.Font.Size = 11.000000000000000000
     ItemAppearanceObjects.ItemObjects.Text.TextVertAlign = Leading
@@ -77,12 +76,10 @@ inherited frmWordnikMain_NmXhdpiPh: TfrmWordnikMain_NmXhdpiPh
     ItemAppearanceObjects.HeaderObjects.Text.Font.StyleExt = {00040000000200000004000000}
   end
   inherited Label3: TLabel
-    Position.Y = 394.000000000000000000
     Size.Width = 395.000000000000000000
     TextSettings.Font.StyleExt = {00070000000000000004000000}
   end
   inherited lvExamples: TListView
-    Position.Y = 416.000000000000000000
     Size.Width = 400.000000000000000000
     ItemAppearance.ItemHeight = 45
     ItemAppearanceObjects.ItemObjects.Text.Font.Family = 'MS Reference Sans Serif'

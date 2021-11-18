@@ -53,6 +53,7 @@ implementation
 {$R *.iPhone47in.fmx IOS}
 {$R *.SmXhdpiPh.fmx ANDROID}
 {$R *.Windows.fmx MSWINDOWS}
+{$R *.Macintosh.fmx MACOS}
 
 uses udmWordnikAPI;
 
