@@ -20,7 +20,7 @@ In searching for a demonstrable API, I stumbled accross [Wordnik.com](https://wo
 
 ## API KEY ##
 
-An API Key is required to make the calls to Wordnik. The DelphiCon presentation shows the app running but the API key was removed before submitting to GitHub. You need to register for your own API key, then update the parameter in both `RESTRequest` components in the data module of this project before attempting to call the API, otherwise, you'll get a **401 - Unauthorized** error response.
+An API Key is required to make the calls to Wordnik. The DelphiCon presentation shows the app running but the API key was removed before submitting to GitHub. You need to register for your own API key, then update the result in the function `GetAPIKey` in the data module of this project before attempting to call the API, otherwise, you'll get a **401 - Unauthorized** error response.
 
 ## Issues Encountered ##
 
