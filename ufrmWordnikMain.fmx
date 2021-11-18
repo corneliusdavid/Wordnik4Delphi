@@ -215,7 +215,6 @@ object frmWordnikMain: TfrmWordnikMain
     ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
     HeaderAppearanceClassName = 'TListHeaderObjects'
     FooterAppearanceClassName = 'TListHeaderObjects'
-    ItemIndex = 0
     Align = Bottom
     Position.Y = 417.000000000000000000
     Size.Width = 440.000000000000000000

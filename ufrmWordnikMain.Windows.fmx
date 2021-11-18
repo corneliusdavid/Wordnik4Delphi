@@ -1,8 +1,6 @@
 inherited frmWordnikMain_Windows: TfrmWordnikMain_Windows
   Caption = 'Wordnik Demo'
   ClientWidth = 500
-  Constraints.MaxWidth = 505.000000000000000000
-  Constraints.MinWidth = 505.000000000000000000
   DesignerMasterStyle = 0
   inherited Header: TToolBar
     Size.Width = 500.000000000000000000
@@ -48,13 +46,6 @@ inherited frmWordnikMain_Windows: TfrmWordnikMain_Windows
   inherited lvDefinitions: TListView
     Size.Width = 500.000000000000000000
     Size.Height = 266.000000000000000000
-    ItemAppearanceObjects.ItemObjects.Text.Font.Family = 'Tahoma'
-    ItemAppearanceObjects.ItemObjects.Text.Font.Size = 11.000000000000000000
-    ItemAppearanceObjects.ItemObjects.Text.TextVertAlign = Leading
-    ItemAppearanceObjects.ItemObjects.Text.WordWrap = True
-    ItemAppearanceObjects.ItemObjects.Text.Width = 465.000000000000000000
-    ItemAppearanceObjects.ItemObjects.Text.Height = 44.000000000000000000
-    ItemAppearanceObjects.ItemObjects.Text.PlaceOffset.X = 14.000000000000000000
     ItemAppearanceObjects.HeaderObjects.Text.Font.StyleExt = {00040000000200000004000000}
   end
   inherited Label3: TLabel
@@ -64,6 +55,6 @@ inherited frmWordnikMain_Windows: TfrmWordnikMain_Windows
   inherited lvExamples: TListView
     Size.Width = 500.000000000000000000
     ItemAppearance.ItemHeight = 52
-    ItemAppearanceObjects.ItemObjects.Text.Font.Family = 'Tahoma'
+    ItemAppearanceObjects.ItemObjects.Text.Font.Family = 'Segoe WP SemiLight'
   end
 end
