@@ -27,7 +27,7 @@ An API Key is required to make the calls to Wordnik. The DelphiCon presentation 
 During the talk, four issues are discussed:
 
 1. The program accesses two endpoints of the API, one returns a JSON _array_, the other returns a JSON _object_ with an embedded array; we show how to set the root element in both the REST Debugger and the REST components of the Delphi project to parse this data in a consistent way.
-2. The data module uses a TRESTResponseDataSetAdapter to transform the JSON response into a FireDAC table and when using the Copy Components button from the REST Debugger, a property is set which causes one of the fields to be incoorrectly converted, causing an error; this is easily corrected by changing the value of a single property.
+2. The data module uses a TRESTResponseDataSetAdapter to transform the JSON response into a FireDAC table and when using the Copy Components button from the REST Debugger, a property is set which causes one of the fields to be incorrectly converted, causing an error; this is easily corrected by changing the value of a single property.
 3. Sending API requests in clear text is a violation of both Android and iOS security guidelines; while you can add exceptions, the better approach is to call the API with HTTPS.
 4. On Windows (and in the REST Debugger), entering a word to send to the API is sent as typed; mobile devices often automatically upper-case the first letter of a word in a text edit control for simplicity and ease of typing. This causes a problem with a case-senstive API such as Wordnik.
 
